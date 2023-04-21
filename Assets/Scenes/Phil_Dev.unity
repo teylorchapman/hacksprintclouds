@@ -737,11 +737,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7827835682985697988, guid: b0a4209788495fa46adb402ca602440e, type: 3}
       propertyPath: BecomeSafe.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7827835682985697988, guid: b0a4209788495fa46adb402ca602440e, type: 3}
       propertyPath: BecomeCharging.m_PersistentCalls.m_Calls.Array.size
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7827835682985697988, guid: b0a4209788495fa46adb402ca602440e, type: 3}
       propertyPath: BecomeSafe.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
