@@ -40,8 +40,6 @@ public class MyCharacterController : MonoBehaviour
         if (Cloud && Cloud.state != 0)
         {
             PlayerHit.Invoke();
-            Debug.Log("PlayerHit");
         }
-        Debug.Log("BONK!");
     }
 }
