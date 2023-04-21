@@ -10,6 +10,8 @@ public class MyCharacterController : MonoBehaviour
     [SerializeField] float jumpSpeed = 1;
     [SerializeField] float speed = 1;
     CharacterController controller;
+
+    public UnityEngine.Events.UnityEvent PlayerHit;
     // Start is called before the first frame update
     void Start()
     {
@@ -32,6 +34,12 @@ public class MyCharacterController : MonoBehaviour
         controller.Move(input * Time.deltaTime);
     }
 
-    // FixedUpdate is called once per physics frame
-
+    void OnControllerColliderHit(ControllerColliderHit collision)
+    {
+        ThunderCloud Cloud = collision.gameObject.GetComponent<ThunderCloud>();
+        if (Cloud && Cloud.state != 0)
+        {
+            PlayerHit.Invoke();
+        }
+    }
 }
