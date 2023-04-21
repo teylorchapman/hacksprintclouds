@@ -10,11 +10,14 @@ public class MyCharacterController : MonoBehaviour
     [SerializeField] float jumpSpeed = 1;
     [SerializeField] float speed = 1;
     CharacterController controller;
-
+    float camMaxX, camMinX;
     public UnityEngine.Events.UnityEvent PlayerHit;
     // Start is called before the first frame update
     void Start()
     {
+        float cameraWidth = Camera.main.orthographicSize * Camera.main.aspect;
+        camMaxX = Camera.main.transform.position.x + cameraWidth;
+        camMinX = Camera.main.transform.position.x - cameraWidth;
         controller = GetComponent<CharacterController>();
     }
 
@@ -31,7 +34,14 @@ public class MyCharacterController : MonoBehaviour
                 else jumpSpeed = 0;
             };
         input.y = jumpSpeed;
-        controller.Move(input * Time.deltaTime);
+
+        Vector2 ourMove = input * Time.deltaTime;
+    
+        if (transform.position.x + ourMove.x < camMinX)
+            ourMove.x = 0;
+        if (transform.position.x + ourMove.x > camMaxX)
+            ourMove.x = 0;
+        controller.Move(ourMove);
     }
 
     void OnControllerColliderHit(ControllerColliderHit collision)
