@@ -435,7 +435,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1858434346122311943, guid: 159c1863c496db149b41030414808668, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 159c1863c496db149b41030414808668, type: 3}
@@ -683,10 +683,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 7807301102804283860, guid: b0a4209788495fa46adb402ca602440e, type: 3}
-      propertyPath: m_IsTrigger
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7807301102804283861, guid: b0a4209788495fa46adb402ca602440e, type: 3}
       propertyPath: m_Name
       value: ThunderCloud
@@ -734,98 +730,6 @@ PrefabInstance:
     - target: {fileID: 7807301102804283862, guid: b0a4209788495fa46adb402ca602440e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7827835682985697988, guid: b0a4209788495fa46adb402ca602440e, type: 3}
-      propertyPath: BecomeSafe.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7827835682985697988, guid: b0a4209788495fa46adb402ca602440e, type: 3}
-      propertyPath: StateChange.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7827835682985697988, guid: b0a4209788495fa46adb402ca602440e, type: 3}
-      propertyPath: BecomeCharging.m_PersistentCalls.m_Calls.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7827835682985697988, guid: b0a4209788495fa46adb402ca602440e, type: 3}
-      propertyPath: BecomeSafe.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 7827835682985697988, guid: b0a4209788495fa46adb402ca602440e, type: 3}
-      propertyPath: StateChange.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7827835682985697988, guid: b0a4209788495fa46adb402ca602440e, type: 3}
-      propertyPath: BecomeSafe.m_PersistentCalls.m_Calls.Array.data[1].m_Target
-      value: 
-      objectReference: {fileID: 7827835682985697984}
-    - target: {fileID: 7827835682985697988, guid: b0a4209788495fa46adb402ca602440e, type: 3}
-      propertyPath: StateChange.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 7827835682985697989}
-    - target: {fileID: 7827835682985697988, guid: b0a4209788495fa46adb402ca602440e, type: 3}
-      propertyPath: BecomeCharging.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 7827835682985697988, guid: b0a4209788495fa46adb402ca602440e, type: 3}
-      propertyPath: BecomeSafe.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7827835682985697988, guid: b0a4209788495fa46adb402ca602440e, type: 3}
-      propertyPath: BecomeCharging.m_PersistentCalls.m_Calls.Array.data[2].m_Target
-      value: 
-      objectReference: {fileID: 7827835682985697984}
-    - target: {fileID: 7827835682985697988, guid: b0a4209788495fa46adb402ca602440e, type: 3}
-      propertyPath: BecomeSafe.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: set_isTrigger
-      objectReference: {fileID: 0}
-    - target: {fileID: 7827835682985697988, guid: b0a4209788495fa46adb402ca602440e, type: 3}
-      propertyPath: StateChange.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7827835682985697988, guid: b0a4209788495fa46adb402ca602440e, type: 3}
-      propertyPath: StateChange.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetSprite
-      objectReference: {fileID: 0}
-    - target: {fileID: 7827835682985697988, guid: b0a4209788495fa46adb402ca602440e, type: 3}
-      propertyPath: BecomeCharging.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7827835682985697988, guid: b0a4209788495fa46adb402ca602440e, type: 3}
-      propertyPath: BecomeCharging.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
-      value: set_isTrigger
-      objectReference: {fileID: 0}
-    - target: {fileID: 7827835682985697988, guid: b0a4209788495fa46adb402ca602440e, type: 3}
-      propertyPath: BecomeSafe.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: UnityEngine.Collider, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 7827835682985697988, guid: b0a4209788495fa46adb402ca602440e, type: 3}
-      propertyPath: StateChange.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: SpriteSwap, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 7827835682985697988, guid: b0a4209788495fa46adb402ca602440e, type: 3}
-      propertyPath: BecomeSafe.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7827835682985697988, guid: b0a4209788495fa46adb402ca602440e, type: 3}
-      propertyPath: BecomeCharging.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
-      value: UnityEngine.Collider, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 7827835682985697988, guid: b0a4209788495fa46adb402ca602440e, type: 3}
-      propertyPath: BecomeCharging.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_BoolArgument
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7827835682985697988, guid: b0a4209788495fa46adb402ca602440e, type: 3}
-      propertyPath: BecomeSafe.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 7827835682985697988, guid: b0a4209788495fa46adb402ca602440e, type: 3}
-      propertyPath: StateChange.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 7827835682985697988, guid: b0a4209788495fa46adb402ca602440e, type: 3}
-      propertyPath: BecomeCharging.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b0a4209788495fa46adb402ca602440e, type: 3}
@@ -886,38 +790,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9d4c7cf3a7323f44eb3b3dd5092c2f6a, type: 3}
---- !u!212 &7827835682105776901 stripped
-SpriteRenderer:
-  m_CorrespondingSourceObject: {fileID: 7807301101935233041, guid: b0a4209788495fa46adb402ca602440e, type: 3}
-  m_PrefabInstance: {fileID: 70674307668726548}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &7827835682985697984 stripped
-BoxCollider:
-  m_CorrespondingSourceObject: {fileID: 7807301102804283860, guid: b0a4209788495fa46adb402ca602440e, type: 3}
-  m_PrefabInstance: {fileID: 70674307668726548}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &7827835682985697985 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7807301102804283861, guid: b0a4209788495fa46adb402ca602440e, type: 3}
-  m_PrefabInstance: {fileID: 70674307668726548}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &7827835682985697989
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7827835682985697985}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a88ef4b93a760d4418253af8f6484217, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 7827835682105776901}
-  sprites:
-  - {fileID: -1180154468, guid: 17c0d5b04e7544947a03382e9d058f74, type: 3}
-  - {fileID: 21300000, guid: 411ddb5b8547bca48bf3e9aa47d73cf8, type: 3}
-  - {fileID: 21300000, guid: 411ddb5b8547bca48bf3e9aa47d73cf8, type: 3}
 --- !u!1001 &8712469744528702081
 PrefabInstance:
   m_ObjectHideFlags: 0
