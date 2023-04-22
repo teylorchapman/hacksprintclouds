@@ -5,15 +5,14 @@ using UnityEngine;
 public class ColorSwap : MonoBehaviour
 {
 
-    [SerializeField] ColorRenderer target;
+    [SerializeField] SpriteRenderer[] target;
 
     [SerializeField] Color[] colors;
     // Start is called before the first frame update
 
     public void swapColor(int i)
     {
-        if (!target)
-            return;
-        target.color = colors[i];
+        foreach( SpriteRenderer t in target)
+        t.color = colors[i];
     }
 }
