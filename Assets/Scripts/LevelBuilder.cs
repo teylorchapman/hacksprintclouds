@@ -17,6 +17,7 @@ public class LevelBuilder : MonoBehaviour
     public float maxShift = 12f;
 
     [SerializeField] GameObject lastPlaced;
+    GameObject lastGenerated;
     [SerializeField] float levelWidth = 5.0f;
 
     List<GameObject> clouds = new List<GameObject>();
@@ -24,13 +25,14 @@ public class LevelBuilder : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GetWidth();   
+        GetWidth();
+        lastGenerated = lastPlaced;
     }
 
     // Update is called once per frame
     void Update()
     {   
-        if (lastPlaced.transform.position.y < Camera.main.transform.position.y + Camera.main.orthographicSize + maxStep)
+        if (lastGenerated.transform.position.y < Camera.main.transform.position.y + Camera.main.orthographicSize + maxStep)
             clouds.Add(PlaceNewCloud());
         foreach( GameObject c in clouds)
         {
@@ -52,24 +54,34 @@ public class LevelBuilder : MonoBehaviour
     {
         float chance = Random.value;
 
-        int index = Mathf.RoundToInt((SafeChance.Evaluate(transform.position.y / MaxHeight) + Random.value) * SafePrefabs.Length) % SafePrefabs.Length;
+        float index = (SafeChance.Evaluate(transform.position.y / MaxHeight) + Random.value);
 
         if (chance > SafeChance.Evaluate(transform.position.y / MaxHeight))
-            return SafePrefabs[index];
+            return SafePrefabs[Mathf.RoundToInt(index * SafePrefabs.Length ) % SafePrefabs.Length];
         else
-            return DangerPrefabs[index];
+            return DangerPrefabs[Mathf.RoundToInt(index * DangerPrefabs.Length ) % DangerPrefabs.Length];
     }
 
     GameObject PlaceNewCloud()
     {
+        if (!lastGenerated)
+            lastGenerated = lastPlaced;
         GameObject newCloud = Instantiate(GetNextCloud());
-        Vector2 NewPos = (Vector2)lastPlaced.transform.position 
+        Vector2 NewPos = (Vector2)lastGenerated.transform.position 
                 + (Vector2.up * Random.Range(minStep, maxStep)) 
-                + (Vector2.right * Random.Range(-1 *(maxShift + (lastPlaced.transform.localScale.x * 0.5f)), (maxShift + (lastPlaced.transform.localScale.x * 0.5f))));
+                + (Vector2.right * Random.Range(-1 *(maxShift + (lastGenerated.transform.localScale.x * 0.5f)), (maxShift + (lastGenerated.transform.localScale.x * 0.5f))));
         NewPos.x = Mathf.Clamp(NewPos.x, -1 * (levelWidth + (newCloud.transform.localScale.x *0.25f)), levelWidth + + (newCloud.transform.localScale.x *0.25f));
         newCloud.transform.position = NewPos;
         
-        lastPlaced = newCloud;
+        lastGenerated = newCloud;
         return newCloud;
+    }
+
+    public void Reset()
+    {
+        foreach (GameObject c in clouds)
+            Destroy(c);
+        clouds.Clear();
+        lastGenerated = lastPlaced;
     }
 }
