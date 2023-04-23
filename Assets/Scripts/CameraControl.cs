@@ -6,7 +6,7 @@ using UnityEngine.Events;
 public class CameraControl : MonoBehaviour
 {
     // Exposed Variables
-    [SerializeField] GameObject playerObject;
+    public GameObject playerObject;
     [SerializeField] float bounds = 0.8f;
     [SerializeField] float climbedDistance = 0.0f;
     [SerializeField] float climbSpeed = 0.1f;
@@ -53,12 +53,14 @@ public class CameraControl : MonoBehaviour
     }
 
     // Draw debug gizmos when Selected
-    void OnDrawGizmosSelected()
+    void OnDrawGizmos()
     {
+        float l_bottomY = transform.position.y - bounds * Camera.main.orthographicSize;
+        float l_topY = transform.position.y + bounds * Camera.main.orthographicSize;
         Gizmos.color = Color.red;
-        Gizmos.DrawLine(new Vector3(-100, bottomY), new Vector3(100, bottomY));
+        Gizmos.DrawLine(new Vector3(-100, l_bottomY), new Vector3(100, l_bottomY));
         Gizmos.color = Color.green;
-        Gizmos.DrawLine(new Vector3(-100, topY), new Vector3(100, topY));
+        Gizmos.DrawLine(new Vector3(-100, l_topY), new Vector3(100, l_topY));
         Gizmos.color = Color.blue;
         Gizmos.DrawLine(new Vector3(-100, transform.position.y), new Vector3(100, transform.position.y));
     }
