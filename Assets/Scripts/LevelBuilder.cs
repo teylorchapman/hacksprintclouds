@@ -45,10 +45,9 @@ public class LevelBuilder : MonoBehaviour
         }
     }   
 
-    void GetWidth(){
-
+    void GetWidth()
+    {
         levelWidth = Camera.main.orthographicSize * Camera.main.aspect;
-
     }
 
     GameObject GetNextCloud()
