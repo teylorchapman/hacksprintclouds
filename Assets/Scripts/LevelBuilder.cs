@@ -34,8 +34,9 @@ public class LevelBuilder : MonoBehaviour
     {   
         if (lastGenerated.transform.position.y < Camera.main.transform.position.y + Camera.main.orthographicSize + maxStep)
             clouds.Add(PlaceNewCloud());
-        foreach( GameObject c in clouds)
+        for(int i = clouds.Count - 1; i >= 0; i--)
         {
+            GameObject c = clouds[i];
             if (c.transform.position.y < Camera.main.transform.position.y - Camera.main.orthographicSize - 10)
             {
                 clouds.Remove(c);
@@ -79,8 +80,8 @@ public class LevelBuilder : MonoBehaviour
 
     public void Reset()
     {
-        foreach (GameObject c in clouds)
-            Destroy(c);
+        for (int i = clouds.Count - 1; i >= 0; i--)
+            Destroy(clouds[i]); 
         clouds.Clear();
         lastGenerated = lastPlaced;
     }
