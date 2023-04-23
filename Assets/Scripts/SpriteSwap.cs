@@ -5,7 +5,7 @@ using UnityEngine;
 public class SpriteSwap : MonoBehaviour
 {
 
-    [SerializeField] SpriteRenderer target;
+    [SerializeField] SpriteRenderer[] target;
 
     [SerializeField] Sprite[] sprites;
     // Start is called before the first frame update
@@ -15,5 +15,11 @@ public class SpriteSwap : MonoBehaviour
         if (!target)
             return;
         target.sprite = sprites[i];
+    }
+
+    public void spriteSwap(int i)
+    {
+        foreach(SpriteRenderer t in target)
+            t.sprite =sprites[i];
     }
 }
