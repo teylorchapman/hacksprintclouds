@@ -12,13 +12,6 @@ public class SpriteSwap : MonoBehaviour
 
     public void SetSprite(int i)
     {
-        if (!target)
-            return;
-        target.sprite = sprites[i];
-    }
-
-    public void spriteSwap(int i)
-    {
         foreach(SpriteRenderer t in target)
             t.sprite =sprites[i];
     }
