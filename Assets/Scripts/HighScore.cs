@@ -11,14 +11,22 @@ public class HighScore : MonoBehaviour
     public Text TxScore, TxHigh; 
 
     // Start is called before the first frame update
+    public void Start()
+    {
+        highscore = PlayerPrefs.GetFloat("HScore", 0);
+    }
+
     public void EnterHighScore(float score)
     {
-        TxScore.text = "Score:\n " + score;
+        TxScore.text = "Score:\n " + score.ToString("0.00");
         if (score > highscore)
         {
             highscore = score;
             NewHighScore.Invoke();
-            TxHigh.text = "High Score:\n " + score;
+   
+            PlayerPrefs.SetFloat("HScore", score);
+            PlayerPrefs.Save();
         }
+        TxHigh.text = "High Score:\n " + highscore.ToString("0.00");
     }
 }
