@@ -9,7 +9,7 @@ public class ThunderCloud : MonoBehaviour
     public float safeTime = 3.0f;
     public float chargeTime = 3.0f;
     public float discargeTime = 3.0f;
-    float stateTime;
+    public float stateTime;
     public Collider discargeCollider;
 
     public int state = 0;

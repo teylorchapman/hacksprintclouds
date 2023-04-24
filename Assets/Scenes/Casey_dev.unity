@@ -376,7 +376,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8712469742855426664, guid: 0f7a4f338c0f58943a202bc4e067e818, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8712469742855426664, guid: 0f7a4f338c0f58943a202bc4e067e818, type: 3}
       propertyPath: m_LocalPosition.x
@@ -550,3 +550,60 @@ MonoBehaviour:
   arrived:
     m_PersistentCalls:
       m_Calls: []
+--- !u!1001 &2905300647589550821
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 924902217270014268, guid: 4e370e5325ba0a5449644681157db275, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 924902217270014268, guid: 4e370e5325ba0a5449644681157db275, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -17.500696
+      objectReference: {fileID: 0}
+    - target: {fileID: 924902217270014268, guid: 4e370e5325ba0a5449644681157db275, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 9.471636
+      objectReference: {fileID: 0}
+    - target: {fileID: 924902217270014268, guid: 4e370e5325ba0a5449644681157db275, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 924902217270014268, guid: 4e370e5325ba0a5449644681157db275, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 924902217270014268, guid: 4e370e5325ba0a5449644681157db275, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 924902217270014268, guid: 4e370e5325ba0a5449644681157db275, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 924902217270014268, guid: 4e370e5325ba0a5449644681157db275, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 924902217270014268, guid: 4e370e5325ba0a5449644681157db275, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 924902217270014268, guid: 4e370e5325ba0a5449644681157db275, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 924902217270014268, guid: 4e370e5325ba0a5449644681157db275, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 924902217270014271, guid: 4e370e5325ba0a5449644681157db275, type: 3}
+      propertyPath: m_Name
+      value: ThunderCloud_Small
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4e370e5325ba0a5449644681157db275, type: 3}

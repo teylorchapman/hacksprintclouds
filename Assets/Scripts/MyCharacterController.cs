@@ -57,7 +57,7 @@ public class MyCharacterController : MonoBehaviour
     void OnControllerColliderHit(ControllerColliderHit collision)
     {
         ThunderCloud Cloud = collision.gameObject.GetComponent<ThunderCloud>();
-        if (Cloud && Cloud.state != 0)
+        if (Cloud && Cloud.state == 2)
         {
             PlayerHurt();
         }

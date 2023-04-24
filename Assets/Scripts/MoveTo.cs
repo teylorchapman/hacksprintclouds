@@ -19,12 +19,12 @@ public class MoveTo : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector2 currentPosition = transform.position;
-        transform.position = Vector2.Lerp(currentPosition, goal, Time.deltaTime / time);
-        if (Vector2.Distance(transform.position, goal) < distance)
+        Vector3 currentPosition = transform.position;
+        transform.position = Vector3.Lerp(currentPosition, goal, Time.deltaTime / time);
+        if (Vector3.Distance(transform.position, goal) < distance)
             arrived.Invoke();
     }
-    public void SetGoal(Vector2 NewGoal)
+    public void SetGoal(Vector3 NewGoal)
     {
         goal = NewGoal;
     }
