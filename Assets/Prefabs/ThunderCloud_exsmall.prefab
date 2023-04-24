@@ -88,6 +88,7 @@ MonoBehaviour:
   safeTime: 3
   chargeTime: 3
   discargeTime: 3
+  stateTime: 0
   discargeCollider: {fileID: 0}
   state: 0
   StateChange:
@@ -245,6 +246,8 @@ GameObject:
   m_Component:
   - component: {fileID: 924902217602697466}
   - component: {fileID: 924902217602697467}
+  - component: {fileID: 4158839503413245438}
+  - component: {fileID: 8874446140331926934}
   m_Layer: 0
   m_Name: Sprite
   m_TagString: Untagged
@@ -319,6 +322,34 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &4158839503413245438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 924902217602697461}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dec5a603a4b5a8344b3c72bd2aac2f7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bounds: {x: 0.02, y: 0.05}
+  speed: 0.2
+--- !u!114 &8874446140331926934
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 924902217602697461}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff4e925781d38ee42af7ad27aa5a3e2f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bounds: {x: 0.02, y: 0.02}
+  speed: 0.5
 --- !u!1 &2572338424808363960
 GameObject:
   m_ObjectHideFlags: 0
@@ -476,6 +507,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4320632891678452110}
   - component: {fileID: 8783883401646445669}
+  - component: {fileID: 3815380870965216852}
   m_Layer: 0
   m_Name: Sprite (1)
   m_TagString: Untagged
@@ -550,3 +582,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &3815380870965216852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5881746566035942033}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dec5a603a4b5a8344b3c72bd2aac2f7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bounds: {x: 0.05, y: 0.05}
+  speed: 0.5

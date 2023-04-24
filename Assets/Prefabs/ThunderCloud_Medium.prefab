@@ -87,6 +87,7 @@ MonoBehaviour:
   safeTime: 5
   chargeTime: 3
   discargeTime: 3
+  stateTime: 0
   discargeCollider: {fileID: 0}
   state: 0
   StateChange:
@@ -226,6 +227,7 @@ GameObject:
   m_Component:
   - component: {fileID: 689268851658258446}
   - component: {fileID: 689268851658258447}
+  - component: {fileID: 362118737846996563}
   m_Layer: 0
   m_Name: Square
   m_TagString: Untagged
@@ -301,6 +303,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &362118737846996563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 689268851658258433}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dec5a603a4b5a8344b3c72bd2aac2f7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bounds: {x: 0.05, y: 0.1}
+  speed: 0.5
 --- !u!1 &788956095257450669
 GameObject:
   m_ObjectHideFlags: 0
@@ -425,6 +441,7 @@ GameObject:
   m_Component:
   - component: {fileID: 244099904957481974}
   - component: {fileID: 4328766962448467090}
+  - component: {fileID: 7958227340330717624}
   m_Layer: 0
   m_Name: Square (1)
   m_TagString: Untagged
@@ -500,6 +517,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &7958227340330717624
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8536224397224866645}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dec5a603a4b5a8344b3c72bd2aac2f7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bounds: {x: 0.05, y: 0.1}
+  speed: -0.1
 --- !u!1 &9062663550122023658
 GameObject:
   m_ObjectHideFlags: 0
