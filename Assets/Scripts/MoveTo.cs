@@ -6,7 +6,7 @@ public class MoveTo : MonoBehaviour
 {
 
 
-    public Vector2 goal;
+    public Vector3 goal;
     public float time = 1;
     public float distance = 0.1f;
     public UnityEvent arrived;
