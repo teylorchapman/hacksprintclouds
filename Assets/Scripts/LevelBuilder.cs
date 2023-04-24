@@ -74,6 +74,17 @@ public class LevelBuilder : MonoBehaviour
         newCloud.transform.position = NewPos;
         
         lastGenerated = newCloud;
+        
+        if (Mathf.Abs(lastGenerated.transform.position.x) > maxStep && Random.value > 0.5f)
+        {
+            clouds.Add(newCloud);
+            newCloud = Instantiate(GetNextCloud());
+            NewPos = (Vector2)lastGenerated.transform.position * Vector2.left;
+            NewPos.x = NewPos.x / 2;
+            NewPos.y = lastGenerated.transform.position.y;
+            newCloud.transform.position = NewPos;
+        }
+        lastGenerated = newCloud;
         return newCloud;
     }
 
