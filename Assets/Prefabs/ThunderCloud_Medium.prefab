@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 689268851453673930}
   - component: {fileID: 7559481532482537098}
   - component: {fileID: 678868951227437786}
+  - component: {fileID: 3810092910369919107}
   m_Layer: 0
   m_Name: ThunderCloud_Medium
   m_TagString: Untagged
@@ -83,14 +84,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b12742d063e086409a8057393036c76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  safeTime: 3
+  safeTime: 5
   chargeTime: 3
   discargeTime: 3
   discargeCollider: {fileID: 0}
   state: 0
   StateChange:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3810092910369919107}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   BecomeSafe:
     m_PersistentCalls:
       m_Calls:
@@ -136,6 +149,25 @@ MonoBehaviour:
   BecomeDischarging:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &3810092910369919107
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 689268851453673931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ff1c97825476e444bc0f63d7a424b07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target:
+  - {fileID: 689268851658258447}
+  - {fileID: 4328766962448467090}
+  colors:
+  - {r: 1, g: 1, b: 1, a: 1}
+  - {r: 0.7058824, g: 0.7058824, b: 0.7058824, a: 1}
+  - {r: 0.3137255, g: 0.3529412, b: 0.3137255, a: 1}
 --- !u!1 &689268851658258433
 GameObject:
   m_ObjectHideFlags: 0
