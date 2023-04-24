@@ -14,6 +14,7 @@ public class CameraControl : MonoBehaviour
 
     // Events
     public UnityEvent PlayerFallen;
+    public UnityEvent<float> SetScore;
 
     // Properties
     float range; // We can't use bounds directly, So we'll set Range in start
@@ -43,6 +44,7 @@ public class CameraControl : MonoBehaviour
 
         if (playerObject && playerObject.transform.position.y < bottomY)
             PlayerFallen.Invoke();
+            SetScore.Invoke(climbedDistance);
     }
 
     // FixedUpdate is called once per physics frame
