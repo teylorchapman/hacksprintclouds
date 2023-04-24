@@ -43,8 +43,9 @@ public class CameraControl : MonoBehaviour
             needClimb = true;
 
         if (playerObject && playerObject.transform.position.y < bottomY)
+        {
             PlayerFallen.Invoke();
-            SetScore.Invoke(climbedDistance);
+        }
     }
 
     // FixedUpdate is called once per physics frame
@@ -88,6 +89,9 @@ public class CameraControl : MonoBehaviour
         // Stop climbing if the player is in frame
         if (playerObject && playerObject.transform.position.y < transform.position.y)
         needClimb = false;
+    }
+    public void SendScore(){
+        SetScore.Invoke(climbedDistance);
     }
 }
 
