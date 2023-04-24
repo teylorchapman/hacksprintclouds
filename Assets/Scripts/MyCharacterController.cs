@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 
 public class MyCharacterController : MonoBehaviour
@@ -11,7 +12,9 @@ public class MyCharacterController : MonoBehaviour
     [SerializeField] float speed = 1;
     CharacterController controller;
     float camMaxX, camMinX;
-    public UnityEngine.Events.UnityEvent PlayerHit;
+    public UnityEvent PlayerHit;
+    public UnityEvent<int> ChangeFace;
+    bool lastGrounded = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,8 +32,15 @@ public class MyCharacterController : MonoBehaviour
             jumpSpeed = jumpSpeed - (gravity * Time.deltaTime);
         else
             {
+                if(!lastGrounded)
+                {
+                    ChangeFace.Invoke(0);
+                }
                 if (Input.GetButton("Jump"))
+                {
                     jumpSpeed = jumpForce;
+                    ChangeFace.Invoke(1);
+                }
                 else jumpSpeed = 0;
             };
         input.y = jumpSpeed;
@@ -49,7 +59,18 @@ public class MyCharacterController : MonoBehaviour
         ThunderCloud Cloud = collision.gameObject.GetComponent<ThunderCloud>();
         if (Cloud && Cloud.state != 0)
         {
-            PlayerHit.Invoke();
+            PlayerHurt();
         }
+    }
+
+    public void ReadyPlayer()
+    {
+        ChangeFace.Invoke(0);
+    }
+
+    public void PlayerHurt()
+    {
+        ChangeFace.Invoke(2);
+        PlayerHit.Invoke();
     }
 }
