@@ -475,7 +475,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d70bd99722ce8fe45bcd195c2fe9d57d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  goal: {x: 0, y: -20}
+  goal: {x: 0, y: -20, z: 0}
   time: 2
   distance: 0.1
   arrived:
