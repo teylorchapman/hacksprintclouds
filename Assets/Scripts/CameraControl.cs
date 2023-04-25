@@ -17,7 +17,7 @@ public class CameraControl : MonoBehaviour
 
     // Properties
     float range; // We can't use bounds directly, So we'll set Range in start
-    float bottomY { get=> transform.position.y - range;}
+    float bottomY { get=> transform.position.y - Camera.main.orthographicSize;}
     float topY { get=>transform.position.y + range;}
 
 
@@ -55,7 +55,7 @@ public class CameraControl : MonoBehaviour
     // Draw debug gizmos when Selected
     void OnDrawGizmos()
     {
-        float l_bottomY = transform.position.y - bounds * Camera.main.orthographicSize;
+        float l_bottomY = transform.position.y - Camera.main.orthographicSize;
         float l_topY = transform.position.y + bounds * Camera.main.orthographicSize;
         Gizmos.color = Color.red;
         Gizmos.DrawLine(new Vector3(-100, l_bottomY), new Vector3(100, l_bottomY));

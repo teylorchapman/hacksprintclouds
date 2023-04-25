@@ -70,7 +70,7 @@ public class LevelBuilder : MonoBehaviour
         Vector2 NewPos = (Vector2)lastGenerated.transform.position 
                 + (Vector2.up * Random.Range(minStep, maxStep)) 
                 + (Vector2.right * Random.Range(-1 *(maxShift + (lastGenerated.transform.localScale.x * 0.5f)), (maxShift + (lastGenerated.transform.localScale.x * 0.5f))));
-        NewPos.x = Mathf.Clamp(NewPos.x, -1 * (levelWidth + (newCloud.transform.localScale.x *0.25f)), levelWidth + + (newCloud.transform.localScale.x *0.25f));
+        NewPos.x = Mathf.Clamp(NewPos.x, -1 * (levelWidth + (newCloud.transform.localScale.x *0.25f)), levelWidth + (newCloud.transform.localScale.x *0.25f));
         newCloud.transform.position = NewPos;
         
         lastGenerated = newCloud;
@@ -81,6 +81,7 @@ public class LevelBuilder : MonoBehaviour
             newCloud = Instantiate(GetNextCloud());
             NewPos = (Vector2)lastGenerated.transform.position * Vector2.left;
             NewPos.x = NewPos.x / 2;
+            NewPos.x = Mathf.Clamp(NewPos.x, -1 * Mathf.Min(maxShift,levelWidth), Mathf.Min(maxShift,levelWidth));
             NewPos.y = lastGenerated.transform.position.y;
             newCloud.transform.position = NewPos;
         }
