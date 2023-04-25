@@ -7,7 +7,7 @@
  * You can control your character with ```AD``` or the ```Left and Right arrow keys``` and use the Space bar to jump.
  * You want to avoid the thunder clouds and try not to fall off the bottom of the screen.
  
- #### You can access our game via this [link](https://teylorchapman.itch.io/cloud-climber) or with our QR code ![This is alt text.](/downloads/qr-code.png)
+ #### You can access our game via this [link](https://teylorchapman.itch.io/cloud-climber)
  
  
  # Authors
